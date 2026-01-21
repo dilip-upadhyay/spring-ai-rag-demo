@@ -1,0 +1,144 @@
+{
+  "info": {
+    "name": "Spring AI RAG API",
+    "description": "Collection for testing the RAG question-answering endpoint",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": [""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask Question - Spring AI",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"What is Spring AI?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask Question - RAG",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"Explain Retrieval-Augmented Generation\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask Question - Vector Embeddings",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"What are vector embeddings?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask Question - Out of Context",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"How does quantum computing work?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ask Question - Empty (Should Fail)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
